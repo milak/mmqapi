@@ -13,7 +13,6 @@ type Context struct {
 	Logger			*log.Logger
 	Host			string
 	InstanceName	string
-	Services		[]Service
 }
 func NewContext(conf *conf.Configuration) *Context {
 	if conf == nil {
