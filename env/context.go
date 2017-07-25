@@ -42,9 +42,5 @@ func NewContext(conf *conf.Configuration) *Context {
 			break
 		}
 	}
-	return &Context{Running : true, Configuration : conf, Logger : logger, Host : host, InstanceName : InstanceName, Services : make([]Service,0)}
-}
-func (this *Context) RegisterService(aService Service){
-	this.Logger.Println("DEBUG Service '"+aService.GetName()+"' registered")
-	this.Services = append(this.Services,aService)
+	return &Context{Running : true, Configuration : conf, Logger : logger, Host : host, InstanceName : InstanceName}
 }
